@@ -25,3 +25,5 @@ Route::put('/update/{id}', [ProyectoController::class, 'editar'])->name('editar'
 
 Route::get('/deleting/{id}', [ProyectoController::class, 'elimina_este'])->name('eliminarProyecto');
 Route::delete('/delete/{id}', [ProyectoController::class, 'eliminar'])->name('eliminar');
+
+Route::get('/generatePDF', [ProyectoController::class, 'informe_todos'])->name('informeCompleto');

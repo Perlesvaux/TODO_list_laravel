@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Proyecto;
+use PDF;
 
 
 class ProyectoController extends Controller
@@ -50,7 +51,17 @@ class ProyectoController extends Controller
         return redirect()->route('homepage');
     }
 
+    public function informe_todos(){
+        $hoy = getdate();
+        $estampa = "$hoy[month]_$hoy[mday]_$hoy[year]";
+        $todos   = Proyecto::all();
+        $informe = PDF::loadView('informe', ['lista_de_proyectos' => $todos]);
+        return $informe->stream("informe.pdf");
+    }
+
 }
+
+
 
 
 

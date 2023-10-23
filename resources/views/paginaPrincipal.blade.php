@@ -45,7 +45,8 @@ Consulta aqui los proyectos vigentes:
 </form>
 </div>
 
-<Button id="show">Nuevo Proyecto</button>
+<button id="show">Nuevo Proyecto</button>
+<a href="{{route('informeCompleto')}}">Descargar en PDF</a>
 
 <script>
 const show = document.getElementById("show")

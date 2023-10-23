@@ -5,9 +5,16 @@ Homepage
 @endsection
 
 @section('contents')
-Consulta aqui los proyectos vigentes:
 
 <table id="matriz-estilizada">
+<tr>
+    <th>Proyecto</th>
+    <th>Fuente</th>
+    <th>Planificado</th>
+    <th>Patrocinado</th>
+    <th>Propios</th>
+    <th colspan="3">Acciones</th>
+</tr>
 @foreach($lista_de_proyectos as $proyecto)
 <tr>
 
@@ -18,6 +25,7 @@ Consulta aqui los proyectos vigentes:
     <td>{{$proyecto->MontoFondosPropios}}</td>
     <td><a href="{{route('editarProyecto', ['id' => $proyecto->id])}}">edit</a></td>
     <td><a href="{{route('eliminarProyecto', ['id' => $proyecto->id])}}">delete</a></td>
+    <td><a href="{{route('informeSingular', ['id'=>$proyecto->id])}}">ver</td>
 
 </tr>
 @endforeach
@@ -44,8 +52,9 @@ Consulta aqui los proyectos vigentes:
 <button type='submit'>+</button>
 </form>
 </div>
-
+<br>
 <button id="show">Nuevo Proyecto</button>
+<br>
 <a href="{{route('informeCompleto')}}">Descargar en PDF</a>
 
 <script>

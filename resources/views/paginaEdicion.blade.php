@@ -5,7 +5,6 @@ Editando... "{{$proyecto->NombreProyecto}}"
 @endsection
 
 @section('contents')
-Ingrese nuevos valores:
 <div>
 <form method='POST' action="{{route('editar', ['id' => $proyecto->id])}}">
 @csrf
@@ -25,8 +24,9 @@ Ingrese nuevos valores:
 <label for='MontoFondosPropios'>Propio:</label>
 <input type='number' name='MontoFondosPropios' value="{{$proyecto->MontoFondosPropios}}" required>
 
-<button type='submit'>Modificar</button>
+<button type='submit'>Confirmar Modificacion</button>
 </form>
+<br>
 <a id="abort" href="{{route('homepage')}}">Cancelar</a>
 </div>
 @endsection

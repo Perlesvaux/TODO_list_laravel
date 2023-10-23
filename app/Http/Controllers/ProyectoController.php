@@ -55,8 +55,17 @@ class ProyectoController extends Controller
         $hoy = getdate();
         $estampa = "$hoy[month]_$hoy[mday]_$hoy[year]";
         $todos   = Proyecto::all();
-        $informe = PDF::loadView('informe', ['lista_de_proyectos' => $todos]);
-        return $informe->stream("informe.pdf");
+        $informe = PDF::loadView('informe', ['lista_de_proyectos' => $todos, 'fecha' => $estampa]);
+        return $informe->stream("informe_$estampa.pdf");
+    }
+
+    public function informe($identifier){
+        $hoy = getdate();
+        $estampa = "$hoy[month]_$hoy[mday]_$hoy[year]";
+        $seleccion = [Proyecto::find($identifier)];
+        $informe = PDF::loadView('informe', ['lista_de_proyectos' => $seleccion, 'fecha' => $estampa]);
+        return $informe->stream("informe_individual_$estampa.pdf");
+
     }
 
 }

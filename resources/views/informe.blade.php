@@ -5,7 +5,17 @@ PDF
 @endsection
 
 @section('contents')
+<h1>Gobierno de El Salvador</h1>
+<h2>MINED</h2>
+<h3>{{$fecha}}</h3>
 <table id="matriz-estilizada">
+<tr>
+    <th>Proyecto</th>
+    <th>Fuente</th>
+    <th>Planificado</th>
+    <th>Patrocinado</th>
+    <th>Propios</th>
+</tr>
 @foreach($lista_de_proyectos as $proyecto)
 <tr>
 

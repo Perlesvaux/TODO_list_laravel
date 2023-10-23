@@ -27,3 +27,4 @@ Route::get('/deleting/{id}', [ProyectoController::class, 'elimina_este'])->name(
 Route::delete('/delete/{id}', [ProyectoController::class, 'eliminar'])->name('eliminar');
 
 Route::get('/generatePDF', [ProyectoController::class, 'informe_todos'])->name('informeCompleto');
+Route::get('/PDFindividual/{id}', [ProyectoController::class, 'informe'])->name('informeSingular');

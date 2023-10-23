@@ -123,6 +123,11 @@ div {
     #nuevo{ display:none; }
 
     #show {display:block; margin:auto;}
+
+    h1, h2, h3 {text-align:center;}
+
+
+
 </style>
 </head>
 <body>

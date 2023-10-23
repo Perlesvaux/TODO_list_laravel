@@ -16,3 +16,12 @@ DB_USERNAME=usuario_final
 DB_PASSWORD=Pa$$w0rd
 
 ```
+
+### NOTA:
+```bash
+#Este comando craera el directorio 'TODO_list_larave' en el directorio actual
+git clone https://github.com/Perlesvaux/TODO_list_laravel.git
+composer install
+./artisan key:generate
+./artisan serve
+```

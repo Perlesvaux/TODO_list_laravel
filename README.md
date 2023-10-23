@@ -1,4 +1,4 @@
-# Lista de projectos
+# Lista de proyectos
 Proyecto laravel que implementa CRUD en una base de datos MySQL.
 
 ## Configurar base de datos:

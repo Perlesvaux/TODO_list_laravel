@@ -10,6 +10,7 @@ PDF
 <h3>{{$fecha}}</h3>
 <table id="matriz-estilizada">
 <tr>
+    <th>ID</th>
     <th>Proyecto</th>
     <th>Fuente</th>
     <th>Planificado</th>
@@ -19,6 +20,7 @@ PDF
 @foreach($lista_de_proyectos as $proyecto)
 <tr>
 
+    <td>{{$proyecto->id}}</td>
     <td>{{$proyecto->NombreProyecto}}</td>
     <td>{{$proyecto->fuenteFondos}}</td>
     <td>{{$proyecto->MontoPlanificado}}</td>

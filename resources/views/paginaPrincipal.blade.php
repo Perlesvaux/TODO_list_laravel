@@ -23,8 +23,7 @@ Consulta aqui los proyectos vigentes:
 @endforeach
 </table>
 
-Añadir proyecto
-<div>
+<div id="nuevo">
 <form method='POST' action="{{route('nuevoProyecto')}}">
 @csrf
 
@@ -45,4 +44,23 @@ Añadir proyecto
 <button type='submit'>+</button>
 </form>
 </div>
+
+<Button id="show">Nuevo Proyecto</button>
+
+<script>
+const show = document.getElementById("show")
+const nuevo = document.getElementById("nuevo")
+
+show.addEventListener("click", ()=>{
+    if (nuevo.style.display != "block" )
+    {
+        nuevo.style.display = "block";
+        show.textContent = "Cancel"
+    }else{
+        nuevo.style.display = "none";
+        show.textContent= "Nuevo Proyecto"
+    }
+})
+
+</script>
 @endsection

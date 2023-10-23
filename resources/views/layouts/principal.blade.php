@@ -119,6 +119,10 @@ div {
       background-color:red;
     /* font-size:3rem; */
     }
+
+    #nuevo{ display:none; }
+
+    #show {display:block; margin:auto;}
 </style>
 </head>
 <body>

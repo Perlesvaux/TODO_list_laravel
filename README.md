@@ -25,3 +25,7 @@ composer install
 ./artisan key:generate
 ./artisan serve
 ```
+## Endpoint principal:
+```bash
+localhost:8000/home
+```
